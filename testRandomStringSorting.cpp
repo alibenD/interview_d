@@ -1,7 +1,7 @@
 /* FileName: testRandomStringSorting.cpp
  * Created Date: 2017.7.30
  * Author: Aliben(Kaiwen, Hu)
- * Description: Test for sorting a random string
+ * Description: Test for sorting a random string, default coding set is Unicode
  * Version: 0.0.1
  */
 
