@@ -11,13 +11,23 @@
 using namespace std;
 
 int main(void){
-	timer *t = new timer();
-	int limit;
+	timerMs *t = new timerMs();
+	int limit, count=0;
 	cout << "Please key in a number for running times: ";
 	cin >> limit;
+	// Test for ms timer
 	t->start();
-	for(int i=0;i<limit;++i);
+	while(count != limit) ++count;
 	t->stop();
 	cout << "The total time: " << t->getInterval() << " ms" << endl;
-	return 0;
+	delete t;
+
+//	// Test for us timer
+//	timerNs *t2 = new timerNs();
+//	t2->start();
+//	while(count != limit) ++count;
+//	t2->stop();
+//	cout << "The total time: " << t2->getInterval() << " ns" << endl;
+//	cout << "The total time: " << t2->transInterval2ms() << " ms" << endl;
+//	return 0;
 }

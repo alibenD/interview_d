@@ -21,14 +21,28 @@
 #ifndef __TIMER_H_
 #define __TIMER_H_
 #include<time.h>
-class timer;
+class timerMs;
+class timerUs;
 
-class timer{
+class timerMs{
 	public:
 		void start();
 		void stop();
 		clock_t getInterval();
+		double transInterval2ms();
 	private:
-		clock_t clockBegin, clockEnd, interval;
+		clock_t clockBegin, clockEnd, timeInterval;
 };
+
+// Nano second timer exists some trouble
+//class timerNs{
+//	public:
+//		void start();
+//		void stop();
+//		unsigned long long getInterval();	
+//		unsigned long long transInterval2ms();
+//	private:
+//		timespec timeBegin, timeEnd;
+//		unsigned long long timeInterval;
+//};
 #endif // __TIMER_H_
