@@ -7,7 +7,8 @@
 
 #ifndef __STRING_GENERATOR_H_
 #define __STRING_GENERATOR_H_
-
+#include<string>
+#include<stdlib.h>
 int stringGenerator(unsigned long long stringLength, std::string &str);
 unsigned long long stringLengthSet(void);
 bool advanceLengthBoundary(unsigned long long, unsigned long long);

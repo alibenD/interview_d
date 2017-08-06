@@ -1,5 +1,6 @@
 #include <iostream>
 #include "stringGenerator.h"
+#include "color.h"
 #include <random>
 
 using namespace std;
@@ -35,12 +36,13 @@ int stringGenerator(unsigned long long stringLength, string &str){
 	cout << "The string length: " << stringLength << endl;
 	unsigned char tmp;
 	for(unsigned long long cursor=0; cursor != stringLength; ++cursor){
-		tmp =  (unsigned char)(rand()%106 + 21);
+		tmp =  (unsigned char)(rand()%94 + 32);
 		str += tmp;
-		cout << (int)tmp << " ";
+//		cout << (int)tmp << " ";
 //		str += (unsigned char)(rand()%107 + 20);
 //		cout << tmp << endl;  // Display generated randomly characters one by one
 	}
+	cout << "The generated random string: " << endl << BLUE <<  str << RESET << endl << endl;
 	return 0;
 }
 

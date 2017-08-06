@@ -9,6 +9,9 @@
 #define __STRING_SORTING_H_
 
 int stringSorting(std::string &str);
+#include"expensiveFunc.h"
 int stringSortingBubble(std::string &str);
+
+void printStatusBar(int total, int current);
 
 #endif

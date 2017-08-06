@@ -18,7 +18,7 @@ void timerMs::stop(){
 }
 
 clock_t timerMs::getInterval(){
-	return timerInterval;
+	return timeInterval;
 }
 
 double timerMs::transInterval2ms(){

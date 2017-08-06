@@ -16,7 +16,10 @@ int stringSorting(string &str){
 	string::iterator outsideIt;
 	string::iterator insideIt;
 	auto tmpChar = tmpStr[0];
+	unsigned long long current = 0;
+	cout << endl << "Progress bar: ";
 	for(outsideIt = tmpStr.begin(); outsideIt != tmpStr.end(); ++outsideIt){
+		printStatusBar((int)str.length(), current);
 		for(insideIt = outsideIt+1; insideIt != tmpStr.end(); ++insideIt){
 			if(*insideIt < *outsideIt){
 				tmpChar = *outsideIt;
@@ -24,11 +27,24 @@ int stringSorting(string &str){
 				*insideIt = tmpChar;
 			}
 		}
+		++current;
 	}
+	cout << "Done" << endl;
 	str = tmpStr;
 	return 0;
 }
 
+void printStatusBar(int total, int current){
+	double percenti = (double)current / (double)total * 100;
+	int percent = (int)percenti;
+	static int right = 0;
+	if(percent  == right){
+		cout << "<";
+		cout.flush();
+		right += 3;
+//		expensiveFunc(1);
+	}	
+}
 
 int stringSortingBubble(string &str){
 	string::iterator outsideIt;

@@ -1,6 +1,4 @@
 #include<iostream>
-#include<string>
-#include<stdlib.h>
 #include<time.h>
 #include"stringGenerator.h"
 using namespace std;
