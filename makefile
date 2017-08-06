@@ -24,4 +24,4 @@ expensiveFunc.o: expensiveFunc.cpp expensiveFunc.h
 	$(CC) $(CFLAGS) -c expensiveFunc.cpp
 
 clean:
-	rm stringSortingDemo stringSortingDemo.o stringGenerator.o stringSorting.o io.o timer.o expensiveFunc.o
+	rm -f stringSortingDemo stringSortingDemo.o stringGenerator.o stringSorting.o io.o timer.o expensiveFunc.o

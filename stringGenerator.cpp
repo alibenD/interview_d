@@ -7,10 +7,11 @@ using namespace std;
 
 unsigned long long stringLengthSet(void){
  	unsigned long long strLength;
-	cout << "Please key an integer as length of a random string(Max:" << ULLONG_MAX << "): "; 
+	cout << "Please key an integer as length of a random string:"; 
 	cin >> strLength;
-	if(advanceLengthBoundary(strLength, ULLONG_MAX)){
+	if(advanceLengthBoundary(strLength, 999999999)){
 		cout << "The input exceeds the boundary, and the length is set with the boundary."<< endl;
+		exit(1);
 	}
 	cin.clear();	// Clean the buff of istream;
 	cin.sync();
